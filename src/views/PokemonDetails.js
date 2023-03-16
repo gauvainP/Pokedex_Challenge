@@ -63,7 +63,7 @@ const PokemonDetails = () => {
             res.json()
 
         ).then(data => {
-            console.log(data.data)
+      
             let temp = {
                 weight: data.data.pokemon_v2_pokemon_aggregate.nodes[0].weight,
                 height: data.data.pokemon_v2_pokemon_aggregate.nodes[0].height,
@@ -74,7 +74,7 @@ const PokemonDetails = () => {
                 stats: data.data.pokemon_v2_pokemon_aggregate.nodes[0].pokemon_v2_pokemonstats_aggregate.nodes,
             };
 
-            console.log(temp)
+   
 
             setPokemon(temp)
 

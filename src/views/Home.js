@@ -17,7 +17,7 @@ const Home = () => {
 
     const handleSearchPokemon = (value) => {
 
-        console.log(value);
+        
         let res = [];
         pokemons.forEach(pok => {
             pok.name.toLowerCase().includes(value.toLowerCase())
@@ -69,7 +69,7 @@ const Home = () => {
 
         ).then(data => {
             let temp = [];
-            console.log(data.data.first_gen)
+           
             for (var i in data.data.first_gen) {
                 temp.push({
                     id: data.data.first_gen[i].id,
