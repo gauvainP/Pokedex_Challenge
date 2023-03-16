@@ -24,7 +24,7 @@ const Pokedex = ({ pokemons, searchedPokemon, pageValues }) => {
 
     return (
         // <div className="Pokedex">
-        <Row gutter={[24, 24]} style={{ paddingLeft: '15%', paddingRight: '15%', paddingBottom: '10%' }} justify="center">
+        <Row gutter={[24, 24]} style={{ paddingLeft: '15%', margin:0, paddingRight: '15%', paddingBottom: '10%' }} justify="center">
 
             <Col className="leftText" xs={24}>
                 <div style={{ fontSize: "25px", float: 'left' }}>
@@ -51,7 +51,7 @@ const Pokedex = ({ pokemons, searchedPokemon, pageValues }) => {
 
             }
             {pokemons.slice(pageValues.minValue, pageValues.maxValue).map(pokemon => (
-                pokemon.name.includes(searchedPokemon) &&
+                pokemon.name.toLowerCase().includes(searchedPokemon.toLowerCase()) &&
                 <Col lg={6}  >
                     <Card style={cardStyle}
                         onClick={() => { location.href = '/pokemon/:' + pokemon.id }}

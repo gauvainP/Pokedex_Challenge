@@ -20,7 +20,7 @@ const Home = () => {
         console.log(value);
         let res = [];
         pokemons.forEach(pok => {
-            pok.name.includes(value)
+            pok.name.toLowerCase().includes(value.toLowerCase())
             res.push({
                 value: pok.name,
             })
@@ -107,7 +107,7 @@ const Home = () => {
 
 
 
-                <Row gutter={[24, 24]} align={'center'} width={500}>
+                <Row gutter={[24, 24]} align={'center'} style={{margin: 0}} >
 
                     <Pagination
                         pageSize={12}

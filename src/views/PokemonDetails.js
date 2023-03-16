@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Row, Col, Tabs, Tag, TabPane } from 'antd';
 import { PageHeader } from '@ant-design/pro-layout';
 import { useParams } from "react-router-dom";
-import { SmileOutlined,ExpandAltOutlined } from "@ant-design/icons";
+import { SmileOutlined, ExpandAltOutlined } from "@ant-design/icons";
 const reusableRowStyle = {
 
     width: '100%',
@@ -119,7 +119,7 @@ const PokemonDetails = () => {
 
                 <Col xs={24} sm={12} md={12} lg={8}>
                     <div className="centeredDiv" >
-                        <Row align={'left'} style={reusableRowStyle}>
+                        <Row al ign={'left'} style={reusableRowStyle}>
                             <Col xs={12}><h3> HP </h3> </Col>
                             <Col xs={12}><progress value={pokemon.stats[0].base_stat}
                                 data-label={pokemon.stats[0].base_stat} max="100"></progress>
@@ -196,7 +196,7 @@ const PokemonDetails = () => {
                     <div className="centeredDiv" >
                         <Row align={'left'} style={reusableRowStyle}>
                             <Col xs={12}><Tag color="#f50">Typ</Tag> </Col>
-                            <Col className="leftText"  xs={12}>  {pokemon.type}</Col>
+                            <Col className="leftText" xs={12}>  {pokemon.type}</Col>
                         </Row>
                         <br />
                         <Row align={'left'} style={reusableRowStyle}>
@@ -214,7 +214,7 @@ const PokemonDetails = () => {
                             <Col xs={12}><Tag color="#f50">Dovednosti</Tag> </Col>
                             <Col xs={12} className="leftText" >
                                 <div>
-                                    <ul>
+                                
 
                                         {pokemon.abilities.map(ability =>
                                             <li >
@@ -222,7 +222,7 @@ const PokemonDetails = () => {
                                             </li>
                                         )}
 
-                                    </ul>
+                                   
                                 </div>
                             </Col>
                             <br />
@@ -238,18 +238,18 @@ const PokemonDetails = () => {
 
     const items = [
         {
-          key: '1',
-          label: <div className="tab_antd"><SmileOutlined /> Profil </div>,
-          
+            key: '1',
+            label: <div className="tab_antd"><SmileOutlined /> Profil </div>,
+
         },
         {
-          key: '2',
-          label: <div className="tab_antd"><ExpandAltOutlined /> Statistiky </div>,
-          
-     
+            key: '2',
+            label: <div className="tab_antd"><ExpandAltOutlined /> Statistiky </div>,
+
+
         },
-    
-      ];
+
+    ];
 
     return (
         <div className="PokemonDetails">
